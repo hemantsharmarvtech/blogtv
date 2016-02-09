@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <script src="/js/nr-852.min.js"></script>
+        <script type="text/javascript" src="/js/amplitude-2.2.0-min.gz.js"></script>
+        <script type="text/javascript" src="/js/mixpanel-2.2.min.js"></script>
+        <script src="/js/analytics.js"></script>
+        <script id="twitter-wjs" src="/js/widgets.js"></script>
+        <script id="facebook-jssdk" src="/js/sdk.js"></script>
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {});
+            NREUM.info = {
+                "beacon": "bam.nr-data.net",
+                "errorBeacon": "bam.nr-data.net",
+                "licenseKey": "660b1d041a",
+                "applicationID": "2450993",
+                "transactionName": "JwlZQ0MKXFUDRh1bCwkDR1ZWAB9QCFBXSw==",
+                "queueTime": 0,
+                "applicationTime": 110,
+                "agent": ""
+            }
+        </script>
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) {
+                function r(n) {
+                    if (!e[n]) {
+                        var o = e[n] = {
+                            exports: {}
+                        };
+                        t[n][0].call(o.exports, function (e) {
+                            var o = t[n][1][e];
+                            return r(o || e)
+                        }, o, o.exports)
+                    }
+                    return e[n].exports
+                }
+                if ("function" == typeof __nr_require)
+                    return __nr_require;
+                for (var o = 0; o < n.length; o++)
+                    r(n[o]);
+                return r
+            }({
+                QJf3ax: [function (t, e) {
+                        function n() {}
+
+                        function r(t) {
+                            function e(t) {
+                                return t && t instanceof n ? t : t ? a(t, i, o) : o()
+                            }
+
+                            function c(n, r, o) {
+                                t && t(n, r, o);
+                                for (var i = e(o), a = f(n), c = a.length, u = 0; c > u; u++)
+                                    a[u].apply(i, r);
+                                return i
+                            }
+
+                            function u(t, e) {
+                                p[t] = f(t).concat(e)
+                            }
+
+                            function f(t) {
+                                return p[t] || []
+                            }
+
+                            function s() {
+                                return r(c)
+                            }
+                            var p = {};
+                            return {
+                                on: u,
+                                emit: c,
+                                create: s,
+                                listeners: f,
+                                context: e,
+                                _events: p
+                            }
+                        }
+
+                        function o() {
+                            return new n
+                        }
+                        var i = "nr@context",
+                                a = t("gos");
+                        e.exports = r()
+                    }, {
+                        gos: "7eSDFh"
+                    }],
+                ee: [function (t, e) {
+                        e.exports = t("QJf3ax")
+                    }, {}],
+                3: [function (t, e) {
+                        function n(t) {
+                            return function () {
+                                r(t, [(new Date).getTime()].concat(i(arguments)))
+                            }
+                        }
+                        var r = t("handle"),
+                                o = t(1),
+                                i = t(2);
+                        "undefined" == typeof window.newrelic && (newrelic = window.NREUM);
+                        var a = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit", "noticeError"];
+                        o(a, function (t, e) {
+                            window.NREUM[e] = n("api-" + e)
+                        }), e.exports = window.NREUM
+                    }, {
+                        1: 12,
+                        2: 13,
+                        handle: "D5DuLP"
+                    }],
+                gos: [function (t, e) {
+                        e.exports = t("7eSDFh")
+                    }, {}],
+                "7eSDFh": [function (t, e) {
+                        function n(t, e, n) {
+                            if (r.call(t, e))
+                                return t[e];
+                            var o = n();
+                            if (Object.defineProperty && Object.keys)
+                                try {
+                                    return Object.defineProperty(t, e, {
+                                        value: o,
+                                        writable: !0,
+                                        enumerable: !1
+                                    }), o
+                                } catch (i) {
+                                }
+                            return t[e] = o, o
+                        }
+                        var r = Object.prototype.hasOwnProperty;
+                        e.exports = n
+                    }, {}],
+                D5DuLP: [function (t, e) {
+                        function n(t, e, n) {
+                            return r.listeners(t).length ? r.emit(t, e, n) : void(r.q && (r.q[t] || (r.q[t] = []), r.q[t].push(e)))
+                        }
+                        var r = t("ee").create();
+                        e.exports = n, n.ee = r, r.q = {}
+                    }, {
+                        ee: "QJf3ax"
+                    }],
+                handle: [function (t, e) {
+                        e.exports = t("D5DuLP")
+                    }, {}],
+                XL7HBI: [function (t, e) {
+                        function n(t) {
+                            var e = typeof t;
+                            return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : i(t, o, function () {
+                                return r++
+                            })
+                        }
+                        var r = 1,
+                                o = "nr@id",
+                                i = t("gos");
+                        e.exports = n
+                    }, {
+                        gos: "7eSDFh"
+                    }],
+                id: [function (t, e) {
+                        e.exports = t("XL7HBI")
+                    }, {}],
+                G9z0Bl: [function (t, e) {
+                        function n() {
+                            if (!v++) {
+                                var t = l.info = NREUM.info,
+                                        e = f.getElementsByTagName("script")[0];
+                                if (t && t.licenseKey && t.applicationID && e) {
+                                    c(p, function (e, n) {
+                                        t[e] || (t[e] = n)
+                                    });
+                                    var n = "https" === s.split(":")[0] || t.sslForHttp;
+                                    l.proto = n ? "https://" : "http://", a("mark", ["onload", i()]);
+                                    var r = f.createElement("script");
+                                    r.src = l.proto + t.agent, e.parentNode.insertBefore(r, e)
+                                }
+                            }
+                        }
+
+                        function r() {
+                            "complete" === f.readyState && o()
+                        }
+
+                        function o() {
+                            a("mark", ["domContent", i()])
+                        }
+
+                        function i() {
+                            return (new Date).getTime()
+                        }
+                        var a = t("handle"),
+                                c = t(1),
+                                u = window,
+                                f = u.document;
+                        t(2);
+                        var s = ("" + location).split("?")[0],
+                                p = {
+                                    beacon: "bam.nr-data.net",
+                                    errorBeacon: "bam.nr-data.net",
+                                    agent: "js-agent.newrelic.com/nr-852.min.js"
+                                },
+                        d = window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent),
+                                l = e.exports = {
+                                    offset: i(),
+                                    origin: s,
+                                    features: {},
+                                    xhrWrappable: d
+                                };
+                        f.addEventListener ? (f.addEventListener("DOMContentLoaded", o, !1), u.addEventListener("load", n, !1)) : (f.attachEvent("onreadystatechange", r), u.attachEvent("onload", n)), a("mark", ["firstbyte", i()]);
+                        var v = 0
+                    }, {
+                        1: 12,
+                        2: 3,
+                        handle: "D5DuLP"
+                    }],
+                loader: [function (t, e) {
+                        e.exports = t("G9z0Bl")
+                    }, {}],
+                12: [function (t, e) {
+                        function n(t, e) {
+                            var n = [],
+                                    o = "",
+                                    i = 0;
+                            for (o in t)
+                                r.call(t, o) && (n[i] = e(o, t[o]), i += 1);
+                            return n
+                        }
+                        var r = Object.prototype.hasOwnProperty;
+                        e.exports = n
+                    }, {}],
+                13: [function (t, e) {
+                        function n(t, e, n) {
+                            e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+                            for (var r = -1, o = n - e || 0, i = Array(0 > o ? 0 : o); ++r < o; )
+                                i[r] = t[e + r];
+                            return i
+                        }
+                        e.exports = n
+                    }, {}]
+            }, {}, ["G9z0Bl"]);
+        </script>
+        <meta content="text/html; charset=utf-8" name="content-type">
+        <meta
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            name="viewport">
+        <title>BoolTV</title>
+        <meta
+            content="BoolTV is a fun way for creators to host interactive shows for a global audience. Join our community to watch and chat with the creators you love!"
+            name="description">
+        <meta content="_ntn1MjJiNVI-pSy_EdP495McC9Nyv-2i06VUl1ooJ4"
+              name="google-site-verification">
+        <meta content="1BAB1CD38321FF75DB22485961CDE4A0" name="msvalidate.01">
+        <meta content="all" name="robots">
+        <meta content="/ieconfig.xml" name="msapplication-config">
+        <meta content="#42A0FC" name="msapplication-TileColor">
+        <meta content="https://d2f6rj4zotxt7y.cloudfront.net/ms-tile-144.png"
+              name="msapplication-TileImage">
+        <meta content="234116589991190" property="fb:app_id">
+        <meta content="app-id=998429112" name="apple-itunes-app">
+        <meta content="234116589991190" property="fb:app_id">
+        <meta content="website" property="og:type">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/favicon-128-39492d058d84dff6cf61203b89122b4b.png"
+            rel="icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/favicon-128-39492d058d84dff6cf61203b89122b4b.png"
+            rel="Shortcut Icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-0549b4a7a91c9c5021d0c1d0c88a0d03.png"
+            rel="apple-touch-icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-72-4793dafdd66cdc735bf9264b7c85de29.png"
+            rel="apple-touch-icon" sizes="72x72">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-76-ebd5a7e39186b5d4803b85115d12b7ee.png"
+            rel="apple-touch-icon" sizes="76x76">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-120-b5f12d5d14f362db0ee359495b230924.png"
+            rel="apple-touch-icon" sizes="120x120">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-152-3619102066982fd82aa32ed5c816a8d9.png"
+            rel="apple-touch-icon" sizes="152x152">
+        <script src="/js/emojione.min.js"></script>
+        <link data-turbolinks-track="true" href="/css/default.css" media="all"
+              rel="stylesheet">
+        <meta content="authenticity_token" name="csrf-param">
+        <meta content="l8czhVloMFvQW6TBHSIbipmZDRavU3Y1uLSsLGofQP8="
+              name="csrf-token">
+        <script>
+            window.Images = window.Images || {};
+
+            window.Images.ImgError = function (source, replaceImageUrl) {
+                source.style.display = 'none';
+                return setTimeout((function () {
+                    source.onerror = null;
+                    source.src = replaceImageUrl;
+                    return source.onload = function () {
+                        return source.style.display = 'block';
+                    };
+                }), 50);
+            };
+        </script>
+        <style type="text/css">
+            .fancybox-margin {
+                margin-right: 15px;
+            }
+        </style>
+        <style id="fit-vids-style">
+            .fluid-width-video-wrapper {
+                width: 100%;
+                position: relative;
+                padding: 0;
+            }
+
+            .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object,
+            .fluid-width-video-wrapper embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <style type="text/css">
+            .fb_hidden {
+                position: absolute;
+                top: -10000px;
+                z-index: 10001
+            }
+
+            .fb_reposition {
+                overflow-x: hidden;
+                position: relative
+            }
+
+            .fb_invisible {
+                display: none
+            }
+
+            .fb_reset {
+                background: none;
+                border: 0;
+                border-spacing: 0;
+                color: #000;
+                cursor: auto;
+                direction: ltr;
+                font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+                font-size: 11px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: 1;
+                margin: 0;
+                overflow: visible;
+                padding: 0;
+                text-align: left;
+                text-decoration: none;
+                text-indent: 0;
+                text-shadow: none;
+                text-transform: none;
+                visibility: visible;
+                white-space: normal;
+                word-spacing: normal
+            }
+
+            .fb_reset>div {
+                overflow: hidden
+            }
+
+            .fb_link img {
+                border: none
+            }
+
+            .fb_dialog {
+                background: rgba(82, 82, 82, .7);
+                position: absolute;
+                top: -10000px;
+                z-index: 10001
+            }
+
+            .fb_reset .fb_dialog_legacy {
+                overflow: visible
+            }
+
+            .fb_dialog_advanced {
+                padding: 10px;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+                border-radius: 8px
+            }
+
+            .fb_dialog_content {
+                background: #fff;
+                color: #333
+            }
+
+            .fb_dialog_close_icon {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 0 transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);
+                cursor: pointer;
+                display: block;
+                height: 15px;
+                position: absolute;
+                right: 18px;
+                top: 17px;
+                width: 15px
+            }
+
+            .fb_dialog_mobile .fb_dialog_close_icon {
+                top: 5px;
+                left: 5px;
+                right: auto
+            }
+
+            .fb_dialog_padding {
+                background-color: transparent;
+                position: absolute;
+                width: 1px;
+                z-index: -1
+            }
+
+            .fb_dialog_close_icon:hover {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 -15px transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)
+            }
+
+            .fb_dialog_close_icon:active {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 -30px transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)
+            }
+
+            .fb_dialog_loader {
+                background-color: #f6f7f8;
+                border: 1px solid #606060;
+                font-size: 24px;
+                padding: 20px
+            }
+
+            .fb_dialog_top_left, .fb_dialog_top_right, .fb_dialog_bottom_left,
+            .fb_dialog_bottom_right {
+                height: 10px;
+                width: 10px;
+                overflow: hidden;
+                position: absolute
+            }
+
+            .fb_dialog_top_left {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 0;
+                left: -10px;
+                top: -10px
+            }
+
+            .fb_dialog_top_right {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -10px;
+                right: -10px;
+                top: -10px
+            }
+
+            .fb_dialog_bottom_left {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -20px;
+                bottom: -10px;
+                left: -10px
+            }
+
+            .fb_dialog_bottom_right {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -30px;
+                right: -10px;
+                bottom: -10px
+            }
+
+            .fb_dialog_vert_left, .fb_dialog_vert_right, .fb_dialog_horiz_top,
+            .fb_dialog_horiz_bottom {
+                position: absolute;
+                background: #525252;
+                filter: alpha(opacity = 70);
+                opacity: .7
+            }
+
+            .fb_dialog_vert_left, .fb_dialog_vert_right {
+                width: 10px;
+                height: 100%
+            }
+
+            .fb_dialog_vert_left {
+                margin-left: -10px
+            }
+
+            .fb_dialog_vert_right {
+                right: 0;
+                margin-right: -10px
+            }
+
+            .fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
+                width: 100%;
+                height: 10px
+            }
+
+            .fb_dialog_horiz_top {
+                margin-top: -10px
+            }
+
+            .fb_dialog_horiz_bottom {
+                bottom: 0;
+                margin-bottom: -10px
+            }
+
+            .fb_dialog_iframe {
+                line-height: 0
+            }
+
+            .fb_dialog_content .dialog_title {
+                background: #6d84b4;
+                border: 1px solid #3a5795;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0
+            }
+
+            .fb_dialog_content .dialog_title>span {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+                    no-repeat 5px 50%;
+                float: left;
+                padding: 5px 0 7px 26px
+            }
+
+            body.fb_hidden {
+                -webkit-transform: none;
+                height: 100%;
+                margin: 0;
+                overflow: visible;
+                position: absolute;
+                top: -10000px;
+                left: 0;
+                width: 100%
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white
+                    no-repeat 50% 50%;
+                min-height: 100%;
+                min-width: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                z-index: 10001
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered {
+                width: auto;
+                height: auto;
+                min-height: initial;
+                min-width: initial;
+                background: none
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+                width: 100%
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+                background: none
+            }
+
+            .loading.centered #fb_dialog_loader_close {
+                color: #fff;
+                display: block;
+                padding-top: 20px;
+                clear: both;
+                font-size: 18px
+            }
+
+            #fb-root #fb_dialog_ipad_overlay {
+                background: rgba(0, 0, 0, .45);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                min-height: 100%;
+                z-index: 10000
+            }
+
+            #fb-root #fb_dialog_ipad_overlay.hidden {
+                display: none
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading iframe {
+                visibility: hidden
+            }
+
+            .fb_dialog_content .dialog_header {
+                -webkit-box-shadow: white 0 1px 1px -1px inset;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA),
+                    to(#2C4987));
+                border-bottom: 1px solid;
+                border-color: #1d4088;
+                color: #fff;
+                font: 14px Helvetica, sans-serif;
+                font-weight: bold;
+                text-overflow: ellipsis;
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+                vertical-align: middle;
+                white-space: nowrap
+            }
+
+            .fb_dialog_content .dialog_header table {
+                -webkit-font-smoothing: subpixel-antialiased;
+                height: 43px;
+                width: 100%
+            }
+
+            .fb_dialog_content .dialog_header td.header_left {
+                font-size: 12px;
+                padding-left: 5px;
+                vertical-align: middle;
+                width: 60px
+            }
+
+            .fb_dialog_content .dialog_header td.header_right {
+                font-size: 12px;
+                padding-right: 5px;
+                vertical-align: middle;
+                width: 60px
+            }
+
+            .fb_dialog_content .touchable_button {
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
+                    color-stop(.5, #355492), to(#2A4887));
+                border: 1px solid #2f477a;
+                -webkit-background-clip: padding-box;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset,
+                    rgba(255, 255, 255, .167969) 0 1px 0;
+                display: inline-block;
+                margin-top: 3px;
+                max-width: 85px;
+                line-height: 18px;
+                padding: 4px 12px;
+                position: relative
+            }
+
+            .fb_dialog_content .dialog_header .touchable_button input {
+                border: none;
+                background: none;
+                color: #fff;
+                font: 12px Helvetica, sans-serif;
+                font-weight: bold;
+                margin: 2px -12px;
+                padding: 2px 6px 3px 6px;
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+            }
+
+            .fb_dialog_content .dialog_header .header_center {
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 18px;
+                text-align: center;
+                vertical-align: middle
+            }
+
+            .fb_dialog_content .dialog_content {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif)
+                    no-repeat 50% 50%;
+                border: 1px solid #555;
+                border-bottom: 0;
+                border-top: 0;
+                height: 150px
+            }
+
+            .fb_dialog_content .dialog_footer {
+                background: #f6f7f8;
+                border: 1px solid #555;
+                border-top-color: #ccc;
+                height: 40px
+            }
+
+            #fb_dialog_loader_close {
+                float: left
+            }
+
+            .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+            }
+
+            .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+                visibility: hidden
+            }
+
+            #fb_dialog_loader_spinner {
+                animation: rotateSpinner 1.2s linear infinite;
+                background-color: transparent;
+                background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 24px;
+                width: 24px
+            }
+
+            @
+            keyframes rotateSpinner { 0% {
+                                          transform: rotate(0deg)
+                                      }
+
+                                      100%
+                                      {
+                                          transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              rotate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              (360
+                                              deg
+
+
+
+
+
+
+
+
+
+
+
+
+                                              )
+                                      }
+            }
+            .fb_iframe_widget {
+                display: inline-block;
+                position: relative
+            }
+
+            .fb_iframe_widget span {
+                display: inline-block;
+                position: relative;
+                text-align: justify
+            }
+
+            .fb_iframe_widget iframe {
+                position: absolute
+            }
+
+            .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
+            .fb_iframe_widget_fluid_desktop iframe {
+                max-width: 100%
+            }
+
+            .fb_iframe_widget_fluid_desktop iframe {
+                min-width: 220px;
+                position: relative
+            }
+
+            .fb_iframe_widget_lift {
+                z-index: 1
+            }
+
+            .fb_hide_iframes iframe {
+                position: relative;
+                left: -10000px
+            }
+
+            .fb_iframe_widget_loader {
+                position: relative;
+                display: inline-block
+            }
+
+            .fb_iframe_widget_fluid {
+                display: inline
+            }
+
+            .fb_iframe_widget_fluid span {
+                width: 100%
+            }
+
+            .fb_iframe_widget_loader iframe {
+                min-height: 32px;
+                z-index: 2;
+                zoom: 1
+            }
+
+            .fb_iframe_widget_loader .FB_Loader {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif)
+                    no-repeat;
+                height: 32px;
+                width: 32px;
+                margin-left: -16px;
+                position: absolute;
+                left: 50%;
+                z-index: 4
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="/css/slider.css">
+        <link rel="stylesheet" type="text/css" href="/css/channels.css">
+    </head>
+
+    <body class="" id="top" ondragstart="return false;"
+          ondrop="return false;">
+        <script>
+            window.SiteOptions = {
+                "chatHost": "chat-dispatchers.booltv.com",
+                "sentryDSN": "https://1242159e9b5e44ae815c8b7b9689c230@app.getsentry.com/9569"
+            }
+        </script>
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="menu-browse"> <!-- %span.notification --> <i
+                                class="icon-hamburger"></i>
+                        </a> <a class="menu-browse-mobile" href="#"> <!-- %span.notification -->
+                            <i class="icon-hamburger"></i>
+                        </a>
+                        <div class="browse"
+                             style="transform: translate(0px, 0px); transition: transform 200ms;">
+                            <div class="search">
+                                <i class="icon icon-search"></i>&nbsp;
+                                <form accept-charset="UTF-8" action="search" id="search-form"
+                                      method="get" role="search">
+                                    <div style="display: hidden;"></div>
+                                    <input autocomplete="off" class="search-input"
+                                           id="search-browse" name="q" placeholder="Search" type="text">
+                                    <div style-display="hidden;">
+                                        <input id="utf8" name="utf8" type="hidden" value="✓">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="page">
+            <script type="application/ld+json">
+                { "@context": "http://schema.org", "@type": "WebSite", "url": "", "potentialAction": { "@type": "SearchAction", "target": "search?q={search_term_string}", "query-input": "required name=search_term_string" } }
+            </script>
+            <div class="no-session-banner">
+                <div class="container">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <h1>Successfully Logged In to Application</h1>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+</div>
+</body>
+</html>

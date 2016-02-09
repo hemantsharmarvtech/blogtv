@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <script src="/js/nr-852.min.js"></script>
+        <script type="text/javascript" src="/js/amplitude-2.2.0-min.gz.js"></script>
+        <script type="text/javascript" src="/js/mixpanel-2.2.min.js"></script>
+        <script src="/js/analytics.js"></script>
+        <script id="twitter-wjs" src="/js/widgets.js"></script>
+        <script id="facebook-jssdk" src="/js/sdk.js"></script>
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {});
+            NREUM.info = {
+                "beacon": "bam.nr-data.net",
+                "errorBeacon": "bam.nr-data.net",
+                "licenseKey": "660b1d041a",
+                "applicationID": "2450993",
+                "transactionName": "JwlZQ0MKXFUDRh1bCwkDR1ZWAB9QCFBXSw==",
+                "queueTime": 0,
+                "applicationTime": 110,
+                "agent": ""
+            }
+        </script>
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) {
+                function r(n) {
+                    if (!e[n]) {
+                        var o = e[n] = {
+                            exports: {}
+                        };
+                        t[n][0].call(o.exports, function (e) {
+                            var o = t[n][1][e];
+                            return r(o || e)
+                        }, o, o.exports)
+                    }
+                    return e[n].exports
+                }
+                if ("function" == typeof __nr_require)
+                    return __nr_require;
+                for (var o = 0; o < n.length; o++)
+                    r(n[o]);
+                return r
+            }({
+                QJf3ax: [function (t, e) {
+                        function n() {}
+
+                        function r(t) {
+                            function e(t) {
+                                return t && t instanceof n ? t : t ? a(t, i, o) : o()
+                            }
+
+                            function c(n, r, o) {
+                                t && t(n, r, o);
+                                for (var i = e(o), a = f(n), c = a.length, u = 0; c > u; u++)
+                                    a[u].apply(i, r);
+                                return i
+                            }
+
+                            function u(t, e) {
+                                p[t] = f(t).concat(e)
+                            }
+
+                            function f(t) {
+                                return p[t] || []
+                            }
+
+                            function s() {
+                                return r(c)
+                            }
+                            var p = {};
+                            return {
+                                on: u,
+                                emit: c,
+                                create: s,
+                                listeners: f,
+                                context: e,
+                                _events: p
+                            }
+                        }
+
+                        function o() {
+                            return new n
+                        }
+                        var i = "nr@context",
+                                a = t("gos");
+                        e.exports = r()
+                    }, {
+                        gos: "7eSDFh"
+                    }],
+                ee: [function (t, e) {
+                        e.exports = t("QJf3ax")
+                    }, {}],
+                3: [function (t, e) {
+                        function n(t) {
+                            return function () {
+                                r(t, [(new Date).getTime()].concat(i(arguments)))
+                            }
+                        }
+                        var r = t("handle"),
+                                o = t(1),
+                                i = t(2);
+                        "undefined" == typeof window.newrelic && (newrelic = window.NREUM);
+                        var a = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit", "noticeError"];
+                        o(a, function (t, e) {
+                            window.NREUM[e] = n("api-" + e)
+                        }), e.exports = window.NREUM
+                    }, {
+                        1: 12,
+                        2: 13,
+                        handle: "D5DuLP"
+                    }],
+                gos: [function (t, e) {
+                        e.exports = t("7eSDFh")
+                    }, {}],
+                "7eSDFh": [function (t, e) {
+                        function n(t, e, n) {
+                            if (r.call(t, e))
+                                return t[e];
+                            var o = n();
+                            if (Object.defineProperty && Object.keys)
+                                try {
+                                    return Object.defineProperty(t, e, {
+                                        value: o,
+                                        writable: !0,
+                                        enumerable: !1
+                                    }), o
+                                } catch (i) {
+                                }
+                            return t[e] = o, o
+                        }
+                        var r = Object.prototype.hasOwnProperty;
+                        e.exports = n
+                    }, {}],
+                D5DuLP: [function (t, e) {
+                        function n(t, e, n) {
+                            return r.listeners(t).length ? r.emit(t, e, n) : void(r.q && (r.q[t] || (r.q[t] = []), r.q[t].push(e)))
+                        }
+                        var r = t("ee").create();
+                        e.exports = n, n.ee = r, r.q = {}
+                    }, {
+                        ee: "QJf3ax"
+                    }],
+                handle: [function (t, e) {
+                        e.exports = t("D5DuLP")
+                    }, {}],
+                XL7HBI: [function (t, e) {
+                        function n(t) {
+                            var e = typeof t;
+                            return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : i(t, o, function () {
+                                return r++
+                            })
+                        }
+                        var r = 1,
+                                o = "nr@id",
+                                i = t("gos");
+                        e.exports = n
+                    }, {
+                        gos: "7eSDFh"
+                    }],
+                id: [function (t, e) {
+                        e.exports = t("XL7HBI")
+                    }, {}],
+                G9z0Bl: [function (t, e) {
+                        function n() {
+                            if (!v++) {
+                                var t = l.info = NREUM.info,
+                                        e = f.getElementsByTagName("script")[0];
+                                if (t && t.licenseKey && t.applicationID && e) {
+                                    c(p, function (e, n) {
+                                        t[e] || (t[e] = n)
+                                    });
+                                    var n = "https" === s.split(":")[0] || t.sslForHttp;
+                                    l.proto = n ? "https://" : "http://", a("mark", ["onload", i()]);
+                                    var r = f.createElement("script");
+                                    r.src = l.proto + t.agent, e.parentNode.insertBefore(r, e)
+                                }
+                            }
+                        }
+
+                        function r() {
+                            "complete" === f.readyState && o()
+                        }
+
+                        function o() {
+                            a("mark", ["domContent", i()])
+                        }
+
+                        function i() {
+                            return (new Date).getTime()
+                        }
+                        var a = t("handle"),
+                                c = t(1),
+                                u = window,
+                                f = u.document;
+                        t(2);
+                        var s = ("" + location).split("?")[0],
+                                p = {
+                                    beacon: "bam.nr-data.net",
+                                    errorBeacon: "bam.nr-data.net",
+                                    agent: "js-agent.newrelic.com/nr-852.min.js"
+                                },
+                        d = window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent),
+                                l = e.exports = {
+                                    offset: i(),
+                                    origin: s,
+                                    features: {},
+                                    xhrWrappable: d
+                                };
+                        f.addEventListener ? (f.addEventListener("DOMContentLoaded", o, !1), u.addEventListener("load", n, !1)) : (f.attachEvent("onreadystatechange", r), u.attachEvent("onload", n)), a("mark", ["firstbyte", i()]);
+                        var v = 0
+                    }, {
+                        1: 12,
+                        2: 3,
+                        handle: "D5DuLP"
+                    }],
+                loader: [function (t, e) {
+                        e.exports = t("G9z0Bl")
+                    }, {}],
+                12: [function (t, e) {
+                        function n(t, e) {
+                            var n = [],
+                                    o = "",
+                                    i = 0;
+                            for (o in t)
+                                r.call(t, o) && (n[i] = e(o, t[o]), i += 1);
+                            return n
+                        }
+                        var r = Object.prototype.hasOwnProperty;
+                        e.exports = n
+                    }, {}],
+                13: [function (t, e) {
+                        function n(t, e, n) {
+                            e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+                            for (var r = -1, o = n - e || 0, i = Array(0 > o ? 0 : o); ++r < o; )
+                                i[r] = t[e + r];
+                            return i
+                        }
+                        e.exports = n
+                    }, {}]
+            }, {}, ["G9z0Bl"]);
+        </script>
+        <meta content="text/html; charset=utf-8" name="content-type">
+        <meta
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            name="viewport">
+        <title>BoolTV</title>
+        <meta
+            content="BoolTV is a fun way for creators to host interactive shows for a global audience. Join our community to watch and chat with the creators you love!"
+            name="description">
+        <meta content="_ntn1MjJiNVI-pSy_EdP495McC9Nyv-2i06VUl1ooJ4"
+              name="google-site-verification">
+        <meta content="1BAB1CD38321FF75DB22485961CDE4A0" name="msvalidate.01">
+        <meta content="all" name="robots">
+        <meta content="/ieconfig.xml" name="msapplication-config">
+        <meta content="#42A0FC" name="msapplication-TileColor">
+        <meta content="https://d2f6rj4zotxt7y.cloudfront.net/ms-tile-144.png"
+              name="msapplication-TileImage">
+        <meta content="234116589991190" property="fb:app_id">
+        <meta content="app-id=998429112" name="apple-itunes-app">
+        <meta content="234116589991190" property="fb:app_id">
+        <meta content="website" property="og:type">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/favicon-128-39492d058d84dff6cf61203b89122b4b.png"
+            rel="icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/favicon-128-39492d058d84dff6cf61203b89122b4b.png"
+            rel="Shortcut Icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-0549b4a7a91c9c5021d0c1d0c88a0d03.png"
+            rel="apple-touch-icon">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-72-4793dafdd66cdc735bf9264b7c85de29.png"
+            rel="apple-touch-icon" sizes="72x72">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-76-ebd5a7e39186b5d4803b85115d12b7ee.png"
+            rel="apple-touch-icon" sizes="76x76">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-120-b5f12d5d14f362db0ee359495b230924.png"
+            rel="apple-touch-icon" sizes="120x120">
+        <link
+            href="https://d2f6rj4zotxt7y.cloudfront.net/assets/apple-touch-icon-152-3619102066982fd82aa32ed5c816a8d9.png"
+            rel="apple-touch-icon" sizes="152x152">
+        <script src="/js/emojione.min.js"></script>
+        <link data-turbolinks-track="true" href="/css/default.css" media="all"
+              rel="stylesheet">
+        <meta content="authenticity_token" name="csrf-param">
+        <meta content="l8czhVloMFvQW6TBHSIbipmZDRavU3Y1uLSsLGofQP8="
+              name="csrf-token">
+        <script>
+            window.Images = window.Images || {};
+
+            window.Images.ImgError = function (source, replaceImageUrl) {
+                source.style.display = 'none';
+                return setTimeout((function () {
+                    source.onerror = null;
+                    source.src = replaceImageUrl;
+                    return source.onload = function () {
+                        return source.style.display = 'block';
+                    };
+                }), 50);
+            };
+        </script>
+        <style type="text/css">
+            .fancybox-margin {
+                margin-right: 15px;
+            }
+        </style>
+        <style id="fit-vids-style">
+            .fluid-width-video-wrapper {
+                width: 100%;
+                position: relative;
+                padding: 0;
+            }
+
+            .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object,
+            .fluid-width-video-wrapper embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <style type="text/css">
+            .fb_hidden {
+                position: absolute;
+                top: -10000px;
+                z-index: 10001
+            }
+
+            .fb_reposition {
+                overflow-x: hidden;
+                position: relative
+            }
+
+            .fb_invisible {
+                display: none
+            }
+
+            .fb_reset {
+                background: none;
+                border: 0;
+                border-spacing: 0;
+                color: #000;
+                cursor: auto;
+                direction: ltr;
+                font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+                font-size: 11px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: normal;
+                letter-spacing: normal;
+                line-height: 1;
+                margin: 0;
+                overflow: visible;
+                padding: 0;
+                text-align: left;
+                text-decoration: none;
+                text-indent: 0;
+                text-shadow: none;
+                text-transform: none;
+                visibility: visible;
+                white-space: normal;
+                word-spacing: normal
+            }
+
+            .fb_reset>div {
+                overflow: hidden
+            }
+
+            .fb_link img {
+                border: none
+            }
+
+            .fb_dialog {
+                background: rgba(82, 82, 82, .7);
+                position: absolute;
+                top: -10000px;
+                z-index: 10001
+            }
+
+            .fb_reset .fb_dialog_legacy {
+                overflow: visible
+            }
+
+            .fb_dialog_advanced {
+                padding: 10px;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
+                border-radius: 8px
+            }
+
+            .fb_dialog_content {
+                background: #fff;
+                color: #333
+            }
+
+            .fb_dialog_close_icon {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 0 transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);
+                cursor: pointer;
+                display: block;
+                height: 15px;
+                position: absolute;
+                right: 18px;
+                top: 17px;
+                width: 15px
+            }
+
+            .fb_dialog_mobile .fb_dialog_close_icon {
+                top: 5px;
+                left: 5px;
+                right: auto
+            }
+
+            .fb_dialog_padding {
+                background-color: transparent;
+                position: absolute;
+                width: 1px;
+                z-index: -1
+            }
+
+            .fb_dialog_close_icon:hover {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 -15px transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)
+            }
+
+            .fb_dialog_close_icon:active {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png)
+                    no-repeat scroll 0 -30px transparent;
+                _background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)
+            }
+
+            .fb_dialog_loader {
+                background-color: #f6f7f8;
+                border: 1px solid #606060;
+                font-size: 24px;
+                padding: 20px
+            }
+
+            .fb_dialog_top_left, .fb_dialog_top_right, .fb_dialog_bottom_left,
+            .fb_dialog_bottom_right {
+                height: 10px;
+                width: 10px;
+                overflow: hidden;
+                position: absolute
+            }
+
+            .fb_dialog_top_left {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 0;
+                left: -10px;
+                top: -10px
+            }
+
+            .fb_dialog_top_right {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -10px;
+                right: -10px;
+                top: -10px
+            }
+
+            .fb_dialog_bottom_left {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -20px;
+                bottom: -10px;
+                left: -10px
+            }
+
+            .fb_dialog_bottom_right {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png)
+                    no-repeat 0 -30px;
+                right: -10px;
+                bottom: -10px
+            }
+
+            .fb_dialog_vert_left, .fb_dialog_vert_right, .fb_dialog_horiz_top,
+            .fb_dialog_horiz_bottom {
+                position: absolute;
+                background: #525252;
+                filter: alpha(opacity = 70);
+                opacity: .7
+            }
+
+            .fb_dialog_vert_left, .fb_dialog_vert_right {
+                width: 10px;
+                height: 100%
+            }
+
+            .fb_dialog_vert_left {
+                margin-left: -10px
+            }
+
+            .fb_dialog_vert_right {
+                right: 0;
+                margin-right: -10px
+            }
+
+            .fb_dialog_horiz_top, .fb_dialog_horiz_bottom {
+                width: 100%;
+                height: 10px
+            }
+
+            .fb_dialog_horiz_top {
+                margin-top: -10px
+            }
+
+            .fb_dialog_horiz_bottom {
+                bottom: 0;
+                margin-bottom: -10px
+            }
+
+            .fb_dialog_iframe {
+                line-height: 0
+            }
+
+            .fb_dialog_content .dialog_title {
+                background: #6d84b4;
+                border: 1px solid #3a5795;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 0
+            }
+
+            .fb_dialog_content .dialog_title>span {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+                    no-repeat 5px 50%;
+                float: left;
+                padding: 5px 0 7px 26px
+            }
+
+            body.fb_hidden {
+                -webkit-transform: none;
+                height: 100%;
+                margin: 0;
+                overflow: visible;
+                position: absolute;
+                top: -10000px;
+                left: 0;
+                width: 100%
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white
+                    no-repeat 50% 50%;
+                min-height: 100%;
+                min-width: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                z-index: 10001
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered {
+                width: auto;
+                height: auto;
+                min-height: initial;
+                min-width: initial;
+                background: none
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+                width: 100%
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+                background: none
+            }
+
+            .loading.centered #fb_dialog_loader_close {
+                color: #fff;
+                display: block;
+                padding-top: 20px;
+                clear: both;
+                font-size: 18px
+            }
+
+            #fb-root #fb_dialog_ipad_overlay {
+                background: rgba(0, 0, 0, .45);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                min-height: 100%;
+                z-index: 10000
+            }
+
+            #fb-root #fb_dialog_ipad_overlay.hidden {
+                display: none
+            }
+
+            .fb_dialog.fb_dialog_mobile.loading iframe {
+                visibility: hidden
+            }
+
+            .fb_dialog_content .dialog_header {
+                -webkit-box-shadow: white 0 1px 1px -1px inset;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA),
+                    to(#2C4987));
+                border-bottom: 1px solid;
+                border-color: #1d4088;
+                color: #fff;
+                font: 14px Helvetica, sans-serif;
+                font-weight: bold;
+                text-overflow: ellipsis;
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+                vertical-align: middle;
+                white-space: nowrap
+            }
+
+            .fb_dialog_content .dialog_header table {
+                -webkit-font-smoothing: subpixel-antialiased;
+                height: 43px;
+                width: 100%
+            }
+
+            .fb_dialog_content .dialog_header td.header_left {
+                font-size: 12px;
+                padding-left: 5px;
+                vertical-align: middle;
+                width: 60px
+            }
+
+            .fb_dialog_content .dialog_header td.header_right {
+                font-size: 12px;
+                padding-right: 5px;
+                vertical-align: middle;
+                width: 60px
+            }
+
+            .fb_dialog_content .touchable_button {
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
+                    color-stop(.5, #355492), to(#2A4887));
+                border: 1px solid #2f477a;
+                -webkit-background-clip: padding-box;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset,
+                    rgba(255, 255, 255, .167969) 0 1px 0;
+                display: inline-block;
+                margin-top: 3px;
+                max-width: 85px;
+                line-height: 18px;
+                padding: 4px 12px;
+                position: relative
+            }
+
+            .fb_dialog_content .dialog_header .touchable_button input {
+                border: none;
+                background: none;
+                color: #fff;
+                font: 12px Helvetica, sans-serif;
+                font-weight: bold;
+                margin: 2px -12px;
+                padding: 2px 6px 3px 6px;
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+            }
+
+            .fb_dialog_content .dialog_header .header_center {
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 18px;
+                text-align: center;
+                vertical-align: middle
+            }
+
+            .fb_dialog_content .dialog_content {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif)
+                    no-repeat 50% 50%;
+                border: 1px solid #555;
+                border-bottom: 0;
+                border-top: 0;
+                height: 150px
+            }
+
+            .fb_dialog_content .dialog_footer {
+                background: #f6f7f8;
+                border: 1px solid #555;
+                border-top-color: #ccc;
+                height: 40px
+            }
+
+            #fb_dialog_loader_close {
+                float: left
+            }
+
+            .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+                text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+            }
+
+            .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+                visibility: hidden
+            }
+
+            #fb_dialog_loader_spinner {
+                animation: rotateSpinner 1.2s linear infinite;
+                background-color: transparent;
+                background-image:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 24px;
+                width: 24px
+            }
+
+            @
+            keyframes rotateSpinner { 0% {
+                                          transform: rotate(0deg)
+                                      }
+
+                                      100%
+                                      {
+                                          transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                          :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              rotate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              (360
+                                              deg
+
+
+
+
+
+
+
+
+
+
+
+
+                                              )
+                                      }
+            }
+            .fb_iframe_widget {
+                display: inline-block;
+                position: relative
+            }
+
+            .fb_iframe_widget span {
+                display: inline-block;
+                position: relative;
+                text-align: justify
+            }
+
+            .fb_iframe_widget iframe {
+                position: absolute
+            }
+
+            .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span,
+            .fb_iframe_widget_fluid_desktop iframe {
+                max-width: 100%
+            }
+
+            .fb_iframe_widget_fluid_desktop iframe {
+                min-width: 220px;
+                position: relative
+            }
+
+            .fb_iframe_widget_lift {
+                z-index: 1
+            }
+
+            .fb_hide_iframes iframe {
+                position: relative;
+                left: -10000px
+            }
+
+            .fb_iframe_widget_loader {
+                position: relative;
+                display: inline-block
+            }
+
+            .fb_iframe_widget_fluid {
+                display: inline
+            }
+
+            .fb_iframe_widget_fluid span {
+                width: 100%
+            }
+
+            .fb_iframe_widget_loader iframe {
+                min-height: 32px;
+                z-index: 2;
+                zoom: 1
+            }
+
+            .fb_iframe_widget_loader .FB_Loader {
+                background:
+                    url(http://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif)
+                    no-repeat;
+                height: 32px;
+                width: 32px;
+                margin-left: -16px;
+                position: absolute;
+                left: 50%;
+                z-index: 4
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="/css/slider.css">
+        <link rel="stylesheet" type="text/css" href="/css/channels.css">
+    </head>
+
+    <body class="" id="top" ondragstart="return false;"
+          ondrop="return false;">
+        <script>
+            window.SiteOptions = {
+                "chatHost": "chat-dispatchers.booltv.com",
+                "sentryDSN": "https://1242159e9b5e44ae815c8b7b9689c230@app.getsentry.com/9569"
+            }
+        </script>
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a class="menu-browse"> <!-- %span.notification --> <i
+                                class="icon-hamburger"></i>
+                        </a> <a class="menu-browse-mobile" href="#"> <!-- %span.notification -->
+                            <i class="icon-hamburger"></i>
+                        </a>
+                        <div class="browse"
+                             style="transform: translate(0px, 0px); transition: transform 200ms;">
+                            <div class="search">
+                                <i class="icon icon-search"></i>&nbsp;
+                                <form accept-charset="UTF-8" action="search" id="search-form"
+                                      method="get" role="search">
+                                    <div style="display: hidden;"></div>
+                                    <input autocomplete="off" class="search-input"
+                                           id="search-browse" name="q" placeholder="Search" type="text">
+                                    <div style-display="hidden;">
+                                        <input id="utf8" name="utf8" type="hidden" value="✓">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="browse-scrollable">
+                                <h4 class="menu-section-title">Live Feeds</h4>
+                                <ul class="vertical-menu">
+                                    <li><i class="icon-star"></i> <a href="featured">Featured</a></li>
+                                    <li><i class="icon-stock"></i> <a href="newest">Newest</a></li>
+                                    <li><i class="icon-earth"></i> <a href="all">All</a></li>
+                                </ul>
+                                <h4 class="menu-section-title">Trending</h4>
+                                <ul class="vertical-menu">
+                                    <li><a href="search?q=entertainment">#entertainment</a></li>
+                                    <li><a href="search?q=music">#music</a></li>
+                                    <li><a href="search?q=comedy">#comedy</a></li>
+                                    <li><a href="search?q=news">#news</a></li>
+                                    <li><a href="search?q=media">#media</a></li>
+                                    <li><a href="search?q=lifestyle">#lifestyle</a></li>
+                                    <li><a href="search?q=sports">#sports</a></li>
+                                    <li><a href="search?q=spanish">#spanish</a></li>
+                                    <li><a href="search?q=filmsmart">#filmsmart</a></li>
+                                    <li><a href="search?q=view">#view</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer">
+                                <div class="mobile-apps">
+                                    <a class="icon-iphone" data-target="#mobile-banner"
+                                       data-toggle="modal" href="#" title="Download our iPhone App">iPhone
+                                        App</a> <a class="icon-android" data-target="#mobile-banner"
+                                               data-toggle="modal" href="#" title="Download our Android App">Android
+                                        App</a>
+                                </div>
+                                <ul class="primary">
+                                    <li><a href="about" id="footer-about">About</a></li>
+                                    <li><a id="footer-jobs" target="_blank">Jobs</a></li>
+                                    <li><a href="privacy" id="footer-privacy">Privacy</a></li>
+                                    <li><a href="terms" id="footer-terms">Terms</a></li>
+                                </ul>
+                                <ul class="primary">
+                                    <li><a href="https://www.facebook.com/booltv"
+                                           id="footer-facebook" target="_blank">Facebook</a></li>
+                                    <li><a href="https://twitter.com/booltv"
+                                           id="footer-twitter" target="_blank">Twitter</a></li>
+                                    <li><a href="https://www.youtube.com/booltv"
+                                           id="footer-youtube" target="_blank">YouTube</a></li>
+                                    <li><a href="http://booltv.tumblr.com/" id="footer-blog"
+                                           target="_blank">Tumblr</a></li>
+                                </ul>
+                                <ul class="primary">
+                                    <li><a href="support" id="footer-support">Support</a></li>
+                                    <li><a href="mailto:support@booltv.com">Feedback</a></li>
+                                    <li><a href="copyright">Copyright Report</a></li>
+                                </ul>
+                                <span class="credits">Made in
+                                    California&nbsp;·&nbsp;Streamup © 2015</span>
+                            </div>
+                        </div>
+                        <div class="browse-overlay" style="display: none;"></div>
+                        <a class="logo cursive" href=""><img alt="Logo cursive"
+                                                             src="/images/logo.png"></a>
+                        <div class="account pull-right">
+                            <a class="header-log-in guest-action btn line" href="#"
+                               id="sign-in">Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <script type="application/ld+json">
+                { "@context": "http://schema.org", "@type": "WebSite", "url": "", "potentialAction": { "@type": "SearchAction", "target": "search?q={search_term_string}", "query-input": "required name=search_term_string" } }
+            </script>
+            <div class="no-session-banner">
+                <div class="container">
+                    <div class="col-lg-12">
+                        <div class="col-lg-10">
+                            <h1>Watch and Broadcast Entertaining Live Streams</h1>
+                            <p>Join our community to go live, chat together, and support your favorite broadcasters.</p>
+                        </div>
+                        <div class="col-lg-2">
+                            <a class="guest-action btn white" href="#">Join BoolTV</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="vslider">
+                <img class="previous-button vslider-btn" src="/images/video-thumbnail.png"/>
+                <img class="next-button vslider-btn" src="/images/video-thumbnail.png"/>
+                <div class="row">
+                    <div class="col-lg-2 vslider-box left-side-box">
+                        <video></video>
+                    </div>
+                    <div class="col-lg-8 vslider-box center-box">
+                        <video></video>
+                    </div>
+                    <div class="col-lg-2 vslider-box right-side-box">
+                        <video></video>
+                    </div>
+                </div>
+            </div> 
+
+            <!--             <div class="vslider">
+                                <div class="row">
+                             <div class="col-lg-2 vslider-box left-side-box">
+                          <video></video>
+                             </div>
+                             <div class="col-lg-8 vslider-box center-box">
+                          <video></video>
+                             </div>
+                             <div class="col-lg-2 vslider-box right-side-box">
+                          <video></video>
+                             </div>
+                                </div>
+                        </div> -->
+
+            <div class="mobile-categories">
+                <div id="sticky-sticky-wrapper">
+                    <div id="sticky-sticky-wrapper" class="sticky-wrapper"
+                         style="height: 42px;">
+                        <div class="col-lg-12 home-categories" id="sticky"
+                             style="width: 1302px;">
+                            <ul class="nav nav-tabs">
+                                <li class="current active" role="presentation"><a
+                                        data-category="featured" href="featured">Featured</a></li>
+                                <li class="" role="presentation"><a data-category="newest"
+                                                                    href="newest">Newest</a></li>
+                                <li class="" role="presentation"><a data-category="all"
+                                                                    href="all">All</a></li>
+                                <li class="" role="presentation"><a data-category="trending"
+                                                                    href="all">Trending</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="channels-grid">
+                <div class="container">
+                    <div class="col-lg-2 channels sidebar-menu">
+                        <div class="sticky-wrapper" id="sticky-sidebar-sticky-wrapper">
+                            <div id="sticky-sidebar-sticky-wrapper" class="sticky-wrapper"
+                                 style="height: 560px;">
+                                <div id="sticky-sidebar" style="width: 160px;">
+                                    <h4 class="menu-section-title">Live Feeds</h4>
+                                    <ul class="vertical-menu live-feeds">
+                                        <li><i class="blue icon-star"></i> <a class="selected"
+                                                                              href="featured">Featured</a></li>
+                                        <li><i class="icon-stock"></i> <a href="newest">Newest</a></li>
+                                        <li><i class="icon-earth"></i> <a href="all">All</a></li>
+                                    </ul>
+                                    <h4 class="menu-section-title">Trending</h4>
+                                    <ul class="vertical-menu trending">
+                                        <li><a href="search?q=entertainment">#entertainment</a></li>
+                                        <li><a href="search?q=music">#music</a></li>
+                                        <li><a href="search?q=comedy">#comedy</a></li>
+                                        <li><a href="search?q=news">#news</a></li>
+                                        <li><a href="search?q=media">#media</a></li>
+                                        <li><a href="search?q=lifestyle">#lifestyle</a></li>
+                                        <li><a href="search?q=sports">#sports</a></li>
+                                        <li><a href="search?q=spanish">#spanish</a></li>
+                                        <li><a href="search?q=filmsmart">#filmsmart</a></li>
+                                        <li><a href="search?q=view">#view</a></li>
+                                    </ul>
+                                    <h4 class="menu-section-title">Get the app</h4>
+                                    <a class="icon-iphone" data-target="#mobile-banner"
+                                       data-toggle="modal" href="#" title="Download our iPhone App">iPhone
+                                        App</a> <a class="icon-android" data-target="#mobile-banner"
+                                               data-toggle="modal" href="#" title="Download our Android App">Android
+                                        App</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="channels col-lg-10">
+                        <div class="row channels-list">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="channel-box">
+                                    <div class="hover-box">
+                                        <a class="" href="#"><i
+                                                class="icon-play button play-button"></i></a>
+                                    </div>
+                                    <h5 id="views" class="channel-subtitle">views: 9,99,9999</h5>
+                                    <img id="thumb" class="channel-image" src="/images/temp.jpg" />
+                                    <h2 id="author" class="channel-title">Author name</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade white" id="1st-step">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-aria-label="Close" data-dismiss="modal"
+                                type="button">
+                            <span aria-hidden="">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="session-panel">
+                            <div class="logo-placeholder">
+                                <a class="logo cursive-center" href=""><img
+                                        alt="Logo cursive"
+                                        src="/images/logo.png">
+                                </a>
+                            </div>
+                            <h3>Welcome to Streamup!</h3>
+                            <p>Watch entertaining channels, chat together, or host your
+                                own live show. Join our community!</p>
+                            <a class="btn continue facebook" href="users/auth/facebook"><i
+                                    class="icon icon-facebook"></i>Continue with Facebook</a> <a
+                                class="btn continue twitter" href="users/auth/twitter"><i
+                                    class="icon icon-twitter"></i>Continue with Twitter</a> <a
+                                class="btn continue email" data-target="#register"
+                                data-toggle="modal" href="#"><i class="icon-email-plus"></i>
+                                Sign up with Email </a><span class="login-prompt"> Already
+                                have an account? <a data-target="#login" data-toggle="modal"
+                                                    href="#">Login</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal white" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-aria-label="Close" data-dismiss="modal"
+                                type="button">
+                            <span aria-hidden="">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="session-panel session_pan_register">
+                            <div class="logo-placeholder">
+                                <a class="logo cursive-center" href=""><img
+                                        alt="Logo cursive"
+                                        src="/images/logo.png">
+                                </a>
+                            </div>
+                            <h3>Let's get started!</h3>
+                            <p>It's quicker than your first time.</p>
+                            <form accept-charset="UTF-8" id="register_form" action="/register" method="post">
+                                <div class="form-group">
+                                    <label>First name:</label>
+                                    <input name="firstName" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last name:</label>
+                                    <input name="lastName" class="form-control" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_email">Gender</label>
+                                    <select class="form-control" name="gender">
+                                        <option name="MALE" value="MALE">MALE</option>
+                                        <option name="FEMALE" value="FEMALE">FEMALE</option>
+                                        <option name="OTHER" value="OTHER">OTHER</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_email">Email</label>
+                                    <input class="form-control" name="email" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_password">Password</label>
+                                    <input class="form-control" name="password" required="required" type="password">
+                                </div>
+                                <!--div class="form-group">
+                                    <label for="user_email">Birthday</label>
+                                    <input type="date" name="birthday" required="required">
+                                </div-->
+                                <div class="form-group">
+                                    <label for="user_email">City</label>
+                                    <input class="form-control" name="city" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_email">State</label>
+                                    <input class="form-control" name="state" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_email">Country</label>
+                                    <input class="form-control" name="country" required="required">
+                                </div>
+                                <div class="form-group action">
+                                    <input class="btn btn-default pull-right" type="submit" value="Register">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal white" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-aria-label="Close" data-dismiss="modal"
+                                type="button">
+                            <span aria-hidden="">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="session-panel">
+                            <div class="logo-placeholder">
+                                <a class="logo cursive-center" href=""><img
+                                        alt="Logo cursive"
+                                        src="/images/logo.png">
+                                </a>
+                            </div>
+                            <h3>Welcome back!</h3>
+                            <p>Take a second and log in!</p>
+                            <!--form accept-charset="UTF-8" action="users/sign_in"
+                                  class="simple_form new_user" data-remote="true"
+                                  id="login-in-form" method="post" novalidate="">
+                                <div style="display: hidden;">
+                                    <input name="utf8" type="hidden" value="✓">
+                                </div>
+                                <div class="form-group">
+                                    <label class="email optional" for="user_email">Email</label> <input
+                                        autofocus="autofocus"
+                                        class="string email optional form-control"
+                                        data-attribute="email"
+                                        data-parsley-required-message="Email cannot be blank"
+                                        data-parsley-trigger="change"
+                                        data-parsley-type-message="Email is invalid"
+                                        data-parsley-type="email" id="user_email" maxlength="254"
+                                        name="user[email]" size="254" tabindex="1" type="email"
+                                        value="" data-parsley-id="7759">
+                                    <div id="parsley-id-7759"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="password optional" for="user_password">Password</label>
+                                    <a class="show-password pull-right small" data-status="masked"
+                                       data-target="#user_password" href="#">Show</a> <input
+                                       class="password optional form-control"
+                                       data-attribute="password" data-parsley-length="[6,50]"
+                                       data-parsley-required-message="Password cannot be blank"
+                                       id="user_password" maxlength="50" name="user[password]"
+                                       size="50" tabindex="2" type="password" data-parsley-id="1761">
+                                    <div id="parsley-id-1761"></div>
+                                </div>
+                                <div class="form-group action">
+                                    <span class="disclaimer"> <a
+                                            class="login-forgot-password" data-target="#forgot"
+                                            data-toggle="modal" href="#">Forgot password?</a>
+                                    </span> <input class="btn btn-default btn btn-default pull-right"
+                                                   id="modalLogInSubmit" name="commit" tabindex="3" type="submit"
+                                                   value="Login">
+                                </div>
+                            </form-->
+                            <% if(locals.message && message != null) { %>
+                            <%= message %>
+                            <% } %>
+
+                            <form action="/login" method="post">
+                                <div class="form-group">
+                                    <label for="user_email">Email</label>
+                                    <input class="form-control" name="email" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user_password">Password</label>
+                                    <input class="form-control" name="password" required="required" type="password">
+                                </div>
+                                <div class="form-group action">
+                                    <input class="btn btn-default btn btn-default pull-right" type="submit" value="Login">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal white" id="forgot">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-aria-label="Close" data-dismiss="modal"
+                                type="button">
+                            <span aria-hidden="">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="session-panel">
+                            <div class="logo-placeholder">
+                                <a class="logo cursive-center" href=""><img
+                                        alt="Logo cursive" src="/images/logo.png"> </a>
+                            </div>
+                            <h3>Forgot your password?</h3>
+                            <p class="message">
+                                Don't forget to push the button. <img alt="1f61b" class="emoji"
+                                                                      src="/images/1f61b.png">
+                            </p>
+                            <form accept-charset="UTF-8" action="users/password"
+                                  class="simple_form new_user" data-remote="true"
+                                  id="request-new-password-form" method="post" novalidate="">
+                                <div style="display: hidden;">
+                                    <input name="utf8" type="hidden" value="✓">
+                                </div>
+                                <div class="form-group">
+                                    <label class="email optional" for="user_email">Email</label> <input
+                                        autofocus="autofocus"
+                                        class="string email optional form-control"
+                                        data-parsley-required-message="Email cannot be blank"
+                                        data-parsley-trigger="change"
+                                        data-parsley-type-message="Email is invalid"
+                                        data-parsley-type="email" id="user_email" label="false"
+                                        maxlength="50" name="user[email]" size="50" type="email"
+                                        value="" data-parsley-id="1653">
+                                    <div id="parsley-id-1653"></div>
+                                </div>
+                                <div class="form-group action">
+                                    <input class="btn btn-default btn btn-default"
+                                           data-disable-with="Requesting..."
+                                           id="modalForgotPasswordSubmit" name="commit" type="submit"
+                                           value="Request new password">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fb-root" class=" fb_reset">
+            <div
+                style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                <div>
+                    <iframe name="fb_xdm_frame_https" frameborder="0"
+                            allowtransparency="true" allowfullscreen="true" scrolling="no"
+                            title="Facebook Cross Domain Communication Frame"
+                            aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https"
+                            src="/assets/xd_arbiter.html" style="border: none;"></iframe>
+                </div>
+            </div>
+            <div
+                style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                <div></div>
+            </div>
+        </div>
+        <!--
+    <div class="modal modal-vertical-centered fade in" id="mobile-banner" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="modal-header visible-xs-block">
+         <button class="close white" data-aria-label="Close" data-dismiss="modal" type="button">
+    <span aria-hidden="">×</span>
+         </button>
+     </div>
+     <div class="modal-body">
+         <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h2>Get the Streamup App!</h2>
+      <p>Watch entertaining channels, chat together, or host
+          <br> your own live show. Join our community!</p>
+      <form accept-charset="UTF-8" action="notifications/sms" class="form-inline" method="post">
+          <div style="display: hidden;">
+    <input name="utf8" type="hidden" value="✓">
+    <input name="authenticity_token" type="hidden" value="l8czhVloMFvQW6TBHSIbipmZDRavU3Y1uLSsLGofQP8=">
+          </div>
+          <div class="form-group">
+    <select class="form-control" id="country_prefix" name="country_prefix" required="required">
+       <option value="+1">+1</option>
+       <option value="+1481">+1481</option>
+       <option value="+20">+20</option>
+       <option value="+211">+211</option>
+       <option value="+212">+212</option>
+       <option value="+213">+213</option>
+       <option value="+216">+216</option>
+       <option value="+218">+218</option>
+       <option value="+220">+220</option>
+       <option value="+221">+221</option>
+       <option value="+222">+222</option>
+       <option value="+223">+223</option>
+       <option value="+225">+225</option>
+       <option value="+226">+226</option>
+       <option value="+228">+228</option>
+       <option value="+229">+229</option>
+       <option value="+230">+230</option>
+       <option value="+231">+231</option>
+       <option value="+232">+232</option>
+       <option value="+233">+233</option>
+       <option value="+234">+234</option>
+       <option value="+235">+235</option>
+       <option value="+236">+236</option>
+       <option value="+237">+237</option>
+       <option value="+238">+238</option>
+       <option value="+239">+239</option>
+       <option value="+240">+240</option>
+       <option value="+241">+241</option>
+       <option value="+242">+242</option>
+       <option value="+243">+243</option>
+       <option value="+244">+244</option>
+       <option value="+245">+245</option>
+       <option value="+246">+246</option>
+       <option value="+248">+248</option>
+       <option value="+249">+249</option>
+       <option value="+250">+250</option>
+       <option value="+251">+251</option>
+       <option value="+252">+252</option>
+       <option value="+253">+253</option>
+       <option value="+254">+254</option>
+       <option value="+255">+255</option>
+       <option value="+256">+256</option>
+       <option value="+257">+257</option>
+       <option value="+258">+258</option>
+       <option value="+260">+260</option>
+       <option value="+261">+261</option>
+       <option value="+262">+262</option>
+       <option value="+263">+263</option>
+       <option value="+264">+264</option>
+       <option value="+265">+265</option>
+       <option value="+266">+266</option>
+       <option value="+267">+267</option>
+       <option value="+268">+268</option>
+       <option value="+269">+269</option>
+       <option value="+27">+27</option>
+       <option value="+277">+277</option>
+       <option value="+284">+284</option>
+       <option value="+290">+290</option>
+       <option value="+291">+291</option>
+       <option value="+297">+297</option>
+       <option value="+298">+298</option>
+       <option value="+299">+299</option>
+       <option value="+30">+30</option>
+       <option value="+31">+31</option>
+       <option value="+32">+32</option>
+       <option value="+33">+33</option>
+       <option value="+34">+34</option>
+       <option value="+340">+340</option>
+       <option value="+345">+345</option>
+       <option value="+350">+350</option>
+       <option value="+351">+351</option>
+       <option value="+352">+352</option>
+       <option value="+353">+353</option>
+       <option value="+354">+354</option>
+       <option value="+355">+355</option>
+       <option value="+356">+356</option>
+       <option value="+357">+357</option>
+       <option value="+358">+358</option>
+       <option value="+359">+359</option>
+       <option value="+36">+36</option>
+       <option value="+370">+370</option>
+       <option value="+371">+371</option>
+       <option value="+372">+372</option>
+       <option value="+373">+373</option>
+       <option value="+374">+374</option>
+       <option value="+375">+375</option>
+       <option value="+376">+376</option>
+       <option value="+378">+378</option>
+       <option value="+379">+379</option>
+       <option value="+380">+380</option>
+       <option value="+381">+381</option>
+       <option value="+382">+382</option>
+       <option value="+385">+385</option>
+       <option value="+386">+386</option>
+       <option value="+387">+387</option>
+       <option value="+389">+389</option>
+       <option value="+39">+39</option>
+       <option value="+40">+40</option>
+       <option value="+41">+41</option>
+       <option value="+420">+420</option>
+       <option value="+421">+421</option>
+       <option value="+423">+423</option>
+       <option value="+43">+43</option>
+       <option value="+44">+44</option>
+       <option value="+441">+441</option>
+       <option value="+45">+45</option>
+       <option value="+46">+46</option>
+       <option value="+47">+47</option>
+       <option value="+473">+473</option>
+       <option value="+48">+48</option>
+       <option value="+49">+49</option>
+       <option value="+500">+500</option>
+       <option value="+501">+501</option>
+       <option value="+502">+502</option>
+       <option value="+503">+503</option>
+       <option value="+504">+504</option>
+       <option value="+505">+505</option>
+       <option value="+506">+506</option>
+       <option value="+507">+507</option>
+       <option value="+508">+508</option>
+       <option value="+509">+509</option>
+       <option value="+51">+51</option>
+       <option value="+52">+52</option>
+       <option value="+53">+53</option>
+       <option value="+54">+54</option>
+       <option value="+55">+55</option>
+       <option value="+56">+56</option>
+       <option value="+57">+57</option>
+       <option value="+58">+58</option>
+       <option value="+590">+590</option>
+       <option value="+591">+591</option>
+       <option value="+592">+592</option>
+       <option value="+593">+593</option>
+       <option value="+594">+594</option>
+       <option value="+595">+595</option>
+       <option value="+596">+596</option>
+       <option value="+597">+597</option>
+       <option value="+598">+598</option>
+       <option value="+599">+599</option>
+       <option value="+60">+60</option>
+       <option value="+61">+61</option>
+       <option value="+62">+62</option>
+       <option value="+63">+63</option>
+       <option value="+64">+64</option>
+       <option value="+649">+649</option>
+       <option value="+65">+65</option>
+       <option value="+66">+66</option>
+       <option value="+664">+664</option>
+       <option value="+670">+670</option>
+       <option value="+671">+671</option>
+       <option value="+672">+672</option>
+       <option value="+673">+673</option>
+       <option value="+674">+674</option>
+       <option value="+675">+675</option>
+       <option value="+676">+676</option>
+       <option value="+677">+677</option>
+       <option value="+678">+678</option>
+       <option value="+679">+679</option>
+       <option value="+680">+680</option>
+       <option value="+681">+681</option>
+       <option value="+682">+682</option>
+       <option value="+683">+683</option>
+       <option value="+684">+684</option>
+       <option value="+685">+685</option>
+       <option value="+686">+686</option>
+       <option value="+687">+687</option>
+       <option value="+688">+688</option>
+       <option value="+689">+689</option>
+       <option value="+690">+690</option>
+       <option value="+691">+691</option>
+       <option value="+692">+692</option>
+       <option value="+7">+7</option>
+       <option value="+758">+758</option>
+       <option value="+767">+767</option>
+       <option value="+784">+784</option>
+       <option value="+787">+787</option>
+       <option value="+809">+809</option>
+       <option value="+81">+81</option>
+       <option value="+82">+82</option>
+       <option value="+84">+84</option>
+       <option value="+850">+850</option>
+       <option value="+852">+852</option>
+       <option value="+853">+853</option>
+       <option value="+855">+855</option>
+       <option value="+856">+856</option>
+       <option value="+86">+86</option>
+       <option value="+868">+868</option>
+       <option value="+869">+869</option>
+       <option value="+872">+872</option>
+       <option value="+876">+876</option>
+       <option value="+880">+880</option>
+       <option value="+886">+886</option>
+       <option value="+891">+891</option>
+       <option value="+90">+90</option>
+       <option value="+91">+91</option>
+       <option value="+92">+92</option>
+       <option value="+93">+93</option>
+       <option value="+94">+94</option>
+       <option value="+95">+95</option>
+       <option value="+960">+960</option>
+       <option value="+961">+961</option>
+       <option value="+962">+962</option>
+       <option value="+963">+963</option>
+       <option value="+964">+964</option>
+       <option value="+965">+965</option>
+       <option value="+966">+966</option>
+       <option value="+967">+967</option>
+       <option value="+968">+968</option>
+       <option value="+970">+970</option>
+       <option value="+971">+971</option>
+       <option value="+972">+972</option>
+       <option value="+973">+973</option>
+       <option value="+974">+974</option>
+       <option value="+975">+975</option>
+       <option value="+976">+976</option>
+       <option value="+977">+977</option>
+       <option value="+98">+98</option>
+       <option value="+992">+992</option>
+       <option value="+993">+993</option>
+       <option value="+994">+994</option>
+       <option value="+995">+995</option>
+       <option value="+996">+996</option>
+       <option value="+998">+998</option>
+    </select>
+    <input class="form-control" data-parsley-required-message="Phone number is required" data-parsley-required="true" data-parsley-type-message="Phone Number is invalid" data-parsley-type="digits" id="phone_number" name="phone_number" placeholder="Phone Number" required="required" type="tel">
+    <input class="btn btn-block btn-black" name="commit" type="submit" value="Get Download Link">
+          </div>
+      </form>
+      <div class="links">
+          <a class="ios-download-link" href="https://itunes.apple.com/us/app/booltv-live-stream-video/id998429112?ls=1&amp;mt=8" target="_blank"><img alt="" class="app-store" src="/images/mobile-banner-app-store-0e9d499ff9fa5202e43f95744e8d6106.png" srcset="https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-app-store-0e9d499ff9fa5202e43f95744e8d6106.png 1x,https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-app-store@2x-6ec8536d185770b6647414af99f8e977.png 2x">
+          </a><img alt="" class="google-play" src="/images/mobile-banner-google-play-3f4f379be13cf6499f323fe7e81a4b90.png" srcset="https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-google-play-3f4f379be13cf6499f323fe7e81a4b90.png 1x,https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-google-play@2x-8ff1319200deb26a3eb8ad96ae73e41f.png 2x">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 screenshots-container">
+      <img alt="" class="screenshot" src="/images/mobile-banner-app-screenshots-fa5f633747d0acf14ef3d6b7af2413e7.png" srcset="https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-app-screenshots-fa5f633747d0acf14ef3d6b7af2413e7.png 1x,https://d2f6rj4zotxt7y.cloudfront.net/assets/mobile-banner-app-screenshots@2x-7d2e211d11411817235c01fc6779df41.png 2x">
+    </div>
+         </div>
+     </div>
+     <div class="modal-footer hidden-xs-block">
+         <div class="close"><a class="not-now" data-aria-label="Close" data-dismiss="modal" href="#">Not Now</a></div>
+     </div>
+    </div>
+        </div>
+    </div>
+        -->
+        <script data-turbolinks-track="true"
+        src="/js/application-70a6f14a6ee17913d3112771c12c45c9.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+        <script src="/js/numeral.min.js"></script>
+        <script src="//cdn.ravenjs.com/1.3.0/jquery,native/raven.min.js"></script>
+        <script>
+            !function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-43937744-1', 'booltv.com');
+            ga('send', 'pageview');
+        </script>
+        <script>
+            (function (e, b) {
+                if (!b.__SV) {
+                    var a, f, i, g;
+                    window.mixpanel = b;
+                    a = e.createElement("script");
+                    a.type = "text/javascript";
+                    a.async = !0;
+                    a.src = ("https:" === e.location.protocol ? "https:" : "http:") + '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
+                    f = e.getElementsByTagName("script")[0];
+                    f.parentNode.insertBefore(a, f);
+                    b._i = [];
+                    b.init = function (a, e, d) {
+                        function f(b, h) {
+                            var a = h.split(".");
+                            2 == a.length && (b = b[a[0]], h = a[1]);
+                            b[h] = function () {
+                                b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                            }
+                        }
+                        var c = b;
+                        "undefined" !==
+                                typeof d ? c = b[d] = [] : d = "mixpanel";
+                        c.people = c.people || [];
+                        c.toString = function (b) {
+                            var a = "mixpanel";
+                            "mixpanel" !== d && (a += "." + d);
+                            b || (a += " (stub)");
+                            return a
+                        };
+                        c.people.toString = function () {
+                            return c.toString(1) + ".people (stub)"
+                        };
+                        i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+                        for (g = 0; g < i.length; g++)
+                            f(c, i[g]);
+                        b._i.push([a, e, d])
+                    };
+                    b.__SV = 1.2
+                }
+            })(document, window.mixpanel || []);
+            mixpanel.init("2bd13f052f0aed7145ea764410b4ae02");
+        </script>
+        <script>
+            (function (e, t) {
+                var r = e.amplitude || {};
+                var n = t.createElement("script");
+                n.type = "text/javascript";
+                n.async = true;
+                n.src = "https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-2.2.0-min.gz.js";
+                var s = t.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(n, s);
+                r._q = [];
+
+                function a(e) {
+                    r[e] = function () {
+                        r._q.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                    }
+                }
+                var i = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "setGlobalUserProperties"];
+                for (var o = 0; o < i.length; o++) {
+                    a(i[o])
+                }
+                e.amplitude = r
+            })(window, document);
+            amplitude.init("1d15545d6148805322ce6ee310eb2acb");
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#sign-up-form').parsley({
+                    successClass: "has-success",
+                    errorClass: "has-error",
+                    classHandler: function (el) {
+                        return el.$element.closest(".form-group");
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#login-in-form').parsley({
+                    successClass: "has-success",
+                    errorClass: "has-error",
+                    classHandler: function (el) {
+                        return el.$element.closest(".form-group");
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#request-new-password-form').parsley({
+                    successClass: "has-success",
+                    errorClass: "has-error",
+                    classHandler: function (el) {
+                        return el.$element.closest(".form-group");
+                    }
+                });
+            });
+        </script>
+        <div id="tiptip_holder" style="max-width: auto;">
+            <div id="tiptip_arrow">
+                <div id="tiptip_arrow_inner"></div>
+            </div>
+            <div id="tiptip_content"></div>
+        </div>
+        <iframe id="rufous-sandbox" scrolling="no" frameborder="0"
+                allowtransparency="true" allowfullscreen="true"
+                style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe>
+    </body>
+
+</html>
